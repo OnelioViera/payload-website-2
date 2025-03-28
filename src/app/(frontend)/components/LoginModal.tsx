@@ -23,7 +23,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       })
 
       if (response.ok) {
-        window.location.href = '/admin'
+        window.open('/admin', '_blank')
+        onClose()
       } else {
         setError('Invalid email or password')
       }
